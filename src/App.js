@@ -1,7 +1,13 @@
 import './App.css';
 import React from 'react'
-import { Router, Route, IndexRoute, browserHistory } 
-from 'react-router-3'
+// import { Router, Route, IndexRoute, browserHistory } 
+// from 'react-router-3'
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 /*Pages */
 import Home from './pages/Home'
 import Cats from './pages/Cats'
@@ -13,9 +19,7 @@ import Nav from './components/Nav'
 import Footer from './components/Footer'
 
 class App extends React.Component {
-  constructor(props) {
-    super(props)
-  }
+
   // Primera  forma de usar Router
   //  routes=()=>({
   //    path:'/',
@@ -31,8 +35,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="row">
-        <Nav />
-        
+
         {/* <Router history={browserHistory} routes={this.routes()}/> */}
         {/*Segunda forma*/}
         {/* <div className="">
@@ -44,13 +47,35 @@ class App extends React.Component {
             <Route path='*' component={NotFound}/>
           </Router>
         </div> */}
+
+        {/*Con react-router-dom */}
+        {/* <Router>
+          <Nav />
+
+          <Switch>
+            <Route path='/cats' >
+              <Cats />
+            </Route>
+            <Route path='/dogs'>
+              <Dogs />
+            </Route>
+            <Route path='/faq'>
+              <Faq />
+            </Route>
+            <Route path='/' >
+              <Home />
+            </Route>
+          </Switch>
+          <Footer />
+        </Router> */}
+  {/*Con los links de href */}
+        <Nav />
         <Home />
         <Cats />
         <Dogs />
         <Faq />
         <NotFound/>
-        <Footer />
-        
+        <Footer/>
       </div>
     );
   }

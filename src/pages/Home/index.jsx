@@ -1,4 +1,5 @@
 import Card from '../../components/Card'
+import Nav from '../../components/Nav'
 import News from '../../components/News'
 import Data from '../../db/data.json'
 const CargarDatos=()=>{

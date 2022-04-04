@@ -7,7 +7,7 @@ const Cards=({data,index})=>{
                 <p className="card-text">Tamaño: {data.size}</p> 
                 <p className="card-text">Raza:{data.raza}</p> 
                 <p className="card-text">Paciente desde: {data.date}</p> 
-                <a href="#" className="btn alert-warning">Ver más</a>
+                <a href="/" className="btn alert-warning">Ver más</a>
               </div>
             </div>
    )
